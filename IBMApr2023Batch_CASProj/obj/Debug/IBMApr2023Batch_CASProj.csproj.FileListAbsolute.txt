@@ -1,0 +1,152 @@
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\IBMApr2023Batch_CASProj.dll.config
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\IBMApr2023Batch_CASProj.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\IBMApr2023Batch_CASProj.pdb
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\csc.exe
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\csc.exe.config
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\csc.rsp
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\csi.exe
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\csi.exe.config
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\csi.rsp
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.Managed.Core.targets
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.AppContext.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Collections.Immutable.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Console.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Globalization.Calendars.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.IO.Compression.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.IO.FileSystem.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Net.Http.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Net.Sockets.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Reflection.Metadata.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.ValueTuple.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Xml.XmlDocument.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Xml.XPath.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\vbc.exe
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\vbc.exe.config
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\vbc.rsp
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\VBCSCompiler.exe
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\VBCSCompiler.exe.config
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\Microsoft.Web.Infrastructure.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Helpers.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Mvc.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Razor.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Webpages.Deployment.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Webpages.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Webpages.Razor.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Razor.xml
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Webpages.xml
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Webpages.Deployment.xml
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Webpages.Razor.xml
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Helpers.xml
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Mvc.xml
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.csproj.AssemblyReference.cache
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.csproj.CoreCompileInputs.cache
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.csproj.CopyComplete
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.pdb
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\EntityFramework.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\EntityFramework.SqlServer.dll
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\EntityFramework.xml
+D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\EntityFramework.SqlServer.xml
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\IBMApr2023Batch_CASProj.dll.config
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\IBMApr2023Batch_CASProj.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\IBMApr2023Batch_CASProj.pdb
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\csc.exe
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\csc.exe.config
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\csc.rsp
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\csi.exe
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\csi.exe.config
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\csi.rsp
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.Managed.Core.targets
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.AppContext.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Collections.Immutable.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Console.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Globalization.Calendars.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.IO.Compression.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.IO.Compression.ZipFile.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.IO.FileSystem.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Net.Http.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Net.Sockets.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Reflection.Metadata.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.ValueTuple.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Xml.XmlDocument.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Xml.XPath.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\vbc.exe
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\vbc.exe.config
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\vbc.rsp
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\VBCSCompiler.exe
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\roslyn\VBCSCompiler.exe.config
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\EntityFramework.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\EntityFramework.SqlServer.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\Microsoft.Web.Infrastructure.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Helpers.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Mvc.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Razor.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Webpages.Deployment.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Webpages.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Webpages.Razor.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\EntityFramework.xml
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\EntityFramework.SqlServer.xml
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Razor.xml
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Webpages.xml
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Webpages.Deployment.xml
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Webpages.Razor.xml
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Helpers.xml
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Mvc.xml
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.csproj.AssemblyReference.cache
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.csproj.CoreCompileInputs.cache
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.csproj.CopyComplete
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.dll
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.pdb
