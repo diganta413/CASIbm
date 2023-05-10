@@ -115,6 +115,7 @@
     <Content Include="Content\Clinic.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\ClinicImg.jpg" />
     <Content Include="Models\SecurityModel\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
