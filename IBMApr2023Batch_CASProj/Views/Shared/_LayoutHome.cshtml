@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-3.6.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg bg-secondary">
+        <div class="container-fluid" style="background-color:white">
+            <img src="~/Content/logo.jpeg" width="75" style="margin-left:90px" />&nbsp;
+            <a class="navbar-brand" href="#">CAS Application</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Make An Appointment</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" action="@Url.Action("Login","Home")">
+                    <button class="btn btn-outline-primary" type="submit" style="margin-right:100px">Login</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content" style="background-image: url(../../Content/pic.jpeg); height: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; ">
+      
+        <p class="welcome"><b>WELCOME TO MEDIFIC</b></p>
+        <br /><br /><br /><br /><br /><br />
+        <h1>Most Trusted Health <br />Partner for life</h1>
+
+        <br />
+        <div class="row" style="display: table;">
+            <div class="column" style="width: 50%; display: block; margin-bottom: 20px; float: left;">
+                <div class="card" style="box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.2); padding: 10px; text-align: center; background-color: darkslateblue">
+                    <h3>Emergency Number</h3>
+                    <p class="number">234-567890</p>
+                    <p>Call 24x7</p>
+                </div>
+            </div>
+
+            <div class="column" style="width: 50%; display: block; margin-bottom: 20px; float: left; ">
+                <div class="card" style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2); padding: 16px; text-align: center; background-color: darkblue">
+                    <h3>Opening Hours</h3>
+                    <p>Mon-Fri 08.00-18.00</p>
+                    <p>Sat-Sun 09.00-15.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
