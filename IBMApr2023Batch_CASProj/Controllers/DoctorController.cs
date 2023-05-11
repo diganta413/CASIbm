@@ -10,7 +10,7 @@ namespace IBM_CAS.Controllers
     [Authorize]
     public class DoctorController : Controller
     {
-        Models.SecuritydbModel.ClinicAutomationSystemIBMEntities _db = new Models.SecuritydbModel.ClinicAutomationSystemIBMEntities();
+        IBMApr2023Batch_CASProj.Models.SecurityModel.CASIbmEntities _db = new IBMApr2023Batch_CASProj.Models.SecurityModel.CASIbmEntities();
         // GET: Doctor
         public ActionResult Index()
         {
@@ -21,9 +21,9 @@ namespace IBM_CAS.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(Models.SecuritydbModel.Doctor doctor)
+        public ActionResult Create(IBMApr2023Batch_CASProj.Models.SecurityModel.Doctor doctor)
         {
-            Models.SecuritydbModel.User user = new Models.SecuritydbModel.User
+            IBMApr2023Batch_CASProj.Models.SecurityModel.User user = new IBMApr2023Batch_CASProj.Models.SecurityModel.User
             {
                 UserName = "Doc" + DateTime.Now.ToString("ddmmyyyyhhmmss"),
                 UserPassword = DateTime.Now.ToString("ddmmyyyyhhmmss")

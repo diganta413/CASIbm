@@ -9,8 +9,135 @@
     <Property Name="UserPassword" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="UserRole" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="LoginStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Doctors" Relationship="CASIbmModel.FK__Doctor__UserId__3A81B327" FromRole="User" ToRole="Doctor" />
+    <NavigationProperty Name="Patients" Relationship="CASIbmModel.FK__Patient__UserId__3F466844" FromRole="User" ToRole="Patient" />
+    <NavigationProperty Name="Salesmen" Relationship="CASIbmModel.FK__Salesman__UserId__440B1D61" FromRole="User" ToRole="Salesman" />
+    <NavigationProperty Name="Suppliers" Relationship="CASIbmModel.FK__Supplier__UserId__44FF419A" FromRole="User" ToRole="Supplier" />
   </EntityType>
   <EntityContainer Name="CASIbmEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Doctors" EntityType="CASIbmModel.Doctor" />
+    <AssociationSet Name="FK__Doctor__UserId__3A81B327" Association="CASIbmModel.FK__Doctor__UserId__3A81B327">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Doctor" EntitySet="Doctors" />
+    </AssociationSet>
+    <EntitySet Name="Patients" EntityType="CASIbmModel.Patient" />
+    <EntitySet Name="Salesmen" EntityType="CASIbmModel.Salesman" />
+    <EntitySet Name="Suppliers" EntityType="CASIbmModel.Supplier" />
+    <AssociationSet Name="FK__Patient__UserId__3F466844" Association="CASIbmModel.FK__Patient__UserId__3F466844">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Patient" EntitySet="Patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Salesman__UserId__440B1D61" Association="CASIbmModel.FK__Salesman__UserId__440B1D61">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Salesman" EntitySet="Salesmen" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Supplier__UserId__44FF419A" Association="CASIbmModel.FK__Supplier__UserId__44FF419A">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Supplier" EntitySet="Suppliers" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Doctor">
+    <Key>
+      <PropertyRef Name="DoctorId" />
+    </Key>
+    <Property Name="DoctorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DoctorFirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DoctorLastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DoctorDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DoctorEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DoctorSpec" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DoctorPhone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DoctorStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="CASIbmModel.FK__Doctor__UserId__3A81B327" FromRole="Doctor" ToRole="User" />
+  </EntityType>
+  <Association Name="FK__Doctor__UserId__3A81B327">
+    <End Type="CASIbmModel.User" Role="User" Multiplicity="1" />
+    <End Type="CASIbmModel.Doctor" Role="Doctor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Doctor">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Patient">
+    <Key>
+      <PropertyRef Name="PatientId" />
+    </Key>
+    <Property Name="PatientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PatientFirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PatientLastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PatientDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PatientEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PatientPhone" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PatientBloodGroup" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="CASIbmModel.FK__Patient__UserId__3F466844" FromRole="Patient" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Salesman">
+    <Key>
+      <PropertyRef Name="SalesmanId" />
+    </Key>
+    <Property Name="SalesmanId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SalesmanFirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SalesmanLastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SalesmanDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SalesmanEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SalesmanPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="CASIbmModel.FK__Salesman__UserId__440B1D61" FromRole="Salesman" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="SupplierId" />
+    </Key>
+    <Property Name="SupplierId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierFirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierLastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierPhone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="CASIbmModel.FK__Supplier__UserId__44FF419A" FromRole="Supplier" ToRole="User" />
+  </EntityType>
+  <Association Name="FK__Patient__UserId__3F466844">
+    <End Type="CASIbmModel.User" Role="User" Multiplicity="1" />
+    <End Type="CASIbmModel.Patient" Role="Patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Patient">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Salesman__UserId__440B1D61">
+    <End Type="CASIbmModel.User" Role="User" Multiplicity="1" />
+    <End Type="CASIbmModel.Salesman" Role="Salesman" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Salesman">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Supplier__UserId__44FF419A">
+    <End Type="CASIbmModel.User" Role="User" Multiplicity="1" />
+    <End Type="CASIbmModel.Supplier" Role="Supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Supplier">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IBM_CAS.Models.SecuritydbModel
+namespace IBMApr2023Batch_CASProj.Models.SecurityModel
 {
     using System;
     using System.Collections.Generic;
