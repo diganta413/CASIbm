@@ -1,0 +1,63 @@
+﻿@model IEnumerable<IBM_CAS.Models.SecuritydbModel.Supplier>
+
+@{
+    ViewBag.Title = "ListSupplier";
+}
+
+<h2>ListSupplier</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SupplierFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SupplierLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SupplierDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SupplierEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SupplierPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SupplierFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SupplierLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SupplierDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SupplierEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SupplierPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.UserName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SupplierId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SupplierId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SupplierId })
+        </td>
+    </tr>
+}
+
+</table>
