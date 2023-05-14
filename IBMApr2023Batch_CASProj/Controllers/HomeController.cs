@@ -27,6 +27,7 @@ public ActionResult Login()
         {
             using (Models.SecurityModel.CASIbmEntities  context = new Models.SecurityModel.CASIbmEntities() )
             {
+               
                 Models.SecurityModel.User usr = context.Users.FirstOrDefault(user => user.UserName.ToLower() ==
                      model.UserName.ToLower() && user.UserPassword == model.UserPassword);
                 if (usr != null)

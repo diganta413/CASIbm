@@ -18,7 +18,7 @@ namespace IBM_CAS.Controllers
 
         public ActionResult Index()
         {
-            var viewModel = new Models.IndexViewModel
+            var viewModel = new Models.IndexViewModel()
             {
                 Doctors = _db.Doctors.Include("User").ToList(),
                 Patients = _db.Patients.Include("User").ToList(),
@@ -93,10 +93,10 @@ namespace IBM_CAS.Controllers
 
         }
         [HttpPost]
-        public ActionResult EditDoctor(Models.SecuritydbModel.Doctor doctor)
+        public ActionResult EditDoctor(IBMApr2023Batch_CASProj.Models.SecurityModel.Doctor doctor)
         {
             var existingDoctor = _db.Doctors.Find(doctor.DoctorId);
-            Models.SecuritydbModel.User user = new Models.SecuritydbModel.User
+            IBMApr2023Batch_CASProj.Models.SecurityModel.User user = new IBMApr2023Batch_CASProj.Models.SecurityModel.User
             {
                 UserName = existingDoctor.User.UserName,
                 UserPassword = existingDoctor.User.UserPassword,
@@ -172,10 +172,10 @@ namespace IBM_CAS.Controllers
 
         }
         [HttpPost]
-        public ActionResult UpdateDoctorStatus(Models.SecuritydbModel.Doctor doctor)
+        public ActionResult UpdateDoctorStatus(IBMApr2023Batch_CASProj.Models.SecurityModel.Doctor doctor)
         {
             var existingDoctor = _db.Doctors.Find(doctor.DoctorId);
-            Models.SecuritydbModel.User user = new Models.SecuritydbModel.User
+            IBMApr2023Batch_CASProj.Models.SecurityModel.User user = new IBMApr2023Batch_CASProj.Models.SecurityModel.User
             {
                 UserName = existingDoctor.User.UserName,
                 UserPassword = existingDoctor.User.UserPassword,
@@ -265,10 +265,10 @@ namespace IBM_CAS.Controllers
 
         }
         [HttpPost]
-        public ActionResult EditPatient(Models.SecuritydbModel.Patient patient)
+        public ActionResult EditPatient(IBMApr2023Batch_CASProj.Models.SecurityModel.Patient patient)
         {
             var existingPatient = _db.Patients.Find(patient.PatientId);
-            Models.SecuritydbModel.User user = new Models.SecuritydbModel.User
+            IBMApr2023Batch_CASProj.Models.SecurityModel.User user = new IBMApr2023Batch_CASProj.Models.SecurityModel.User
             {
                 UserName = existingPatient.User.UserName,
                 UserPassword = existingPatient.User.UserPassword,
@@ -388,10 +388,10 @@ namespace IBM_CAS.Controllers
 
         }
         [HttpPost]
-        public ActionResult EditSupplier(Models.SecuritydbModel.Supplier supplier)
+        public ActionResult EditSupplier(IBMApr2023Batch_CASProj.Models.SecurityModel.Supplier supplier)
         {
             var existingSupplier = _db.Suppliers.Find(supplier.SupplierId);
-            Models.SecuritydbModel.User user = new Models.SecuritydbModel.User
+            IBMApr2023Batch_CASProj.Models.SecurityModel.User user = new IBMApr2023Batch_CASProj.Models.SecurityModel.User
             {
                 UserName = existingSupplier.User.UserName,
                 UserPassword = existingSupplier.User.UserPassword,
@@ -508,10 +508,10 @@ namespace IBM_CAS.Controllers
 
         }
         [HttpPost]
-        public ActionResult EditSalesman(Models.SecuritydbModel.Salesman salesman)
+        public ActionResult EditSalesman(IBMApr2023Batch_CASProj.Models.SecurityModel.Salesman salesman)
         {
             var existingSalesman = _db.Salesmen.Find(salesman.SalesmanId);
-            Models.SecuritydbModel.User user = new Models.SecuritydbModel.User
+            IBMApr2023Batch_CASProj.Models.SecurityModel.User user = new IBMApr2023Batch_CASProj.Models.SecurityModel.User
             {
                 UserName = existingSalesman.User.UserName,
                 UserPassword = existingSalesman.User.UserPassword,

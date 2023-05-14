@@ -14,6 +14,12 @@ namespace IBMApr2023Batch_CASProj.Models.SecurityModel
     
     public partial class Supplier
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Supplier()
+        {
+            this.Orders = new HashSet<Order>();
+        }
+    
         public int SupplierId { get; set; }
         public string SupplierFirstName { get; set; }
         public string SupplierLastName { get; set; }
@@ -23,5 +29,7 @@ namespace IBMApr2023Batch_CASProj.Models.SecurityModel
         public int UserId { get; set; }
     
         public virtual User User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

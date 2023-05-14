@@ -3,9 +3,30 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/jquery-3.6.4.js"></script>
+    <link href="~/CSS/Doctor.css" rel="stylesheet"/>
     <title>@ViewBag.Title</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index: 2; box-shadow: 0 2px 4px 0 rgba(0,0,0,.2)">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-weight: bolder;font-size: 25px;">CAS Doctor</a>
+
+        </div>
+        <form role="search" action="@Url.Action("Logout", "Home")" style="margin-block-end: 0;">
+        <button type="submit" class="btn btn-danger" style="margin-right: 20px">Logout</button>
+        </form>
+    </nav>
+    <!-- Sidebar -->
+    <div id="mySidenav" class="sidenav">
+        <a class="nav-link" aria-current="page" href="@Url.Action("ListPatients","Doctor")" style="margin-top: 20px;">Patients</a>
+        <a class="nav-link" href="@Url.Action("Inventory","Doctor")">Inventory</a>
+    </div>
+
+    
+    <!-- Sidebar -->
     <div>
         @RenderBody()
     </div>

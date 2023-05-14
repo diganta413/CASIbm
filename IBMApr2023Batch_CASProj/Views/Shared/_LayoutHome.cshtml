@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -9,15 +10,16 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <script src="~/Scripts/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
 
 </head>
 <body>
 
-    
+
     <nav class="navbar navbar-expand-lg bg-secondary">
-        <div class="container-fluid" style="background-color:white">
-            <img src="~/Content/logo.jpeg" width="75" style="margin-left:90px" />&nbsp;
+        <div class="container-fluid" style="background-color:white;">
+            <img src="~/Content/logo.jpeg" width="75" />
             <a class="navbar-brand" href="#">CAS Application</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -31,44 +33,343 @@
                         <a class="nav-link active" aria-current="page" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Make An Appointment</a>
+                        <a class="nav-link active" aria-current="page" href="#">Make An Order</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search" action="@Url.Action("Login","Home")">
-                    <button class="btn btn-outline-primary" type="submit" style="margin-right:100px">Login</button>
+                    <button class="btn btn-outline-primary" type="submit">Login</button>
                 </form>
             </div>
         </div>
     </nav>
 
-    <div class="container body-content" style="background-image: url(../../Content/pic.jpeg); height: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; ">
-      
-        <p class="welcome"><b>WELCOME TO MEDIFIC</b></p>
-        <br /><br /><br /><br /><br /><br />
-        <h1>Most Trusted Health <br />Partner for life</h1>
+    <div style="background-image: url('../../img/photo.jpg'); background-size: cover; background-repeat: no-repeat; ">
 
-        <br />
-        <div class="row" style="display: table;">
-            <div class="column" style="width: 50%; display: block; margin-bottom: 20px; float: left;">
-                <div class="card" style="box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.2); padding: 10px; text-align: center; background-color: darkslateblue">
-                    <h3>Emergency Number</h3>
-                    <p class="number">234-567890</p>
-                    <p>Call 24x7</p>
+        <p class="welcome" style="margin-left: 20px;"><b>WELCOME TO MEDIFIC</b></p>
+        @*@<input type="text" placeholder="Search.." style="margin-top:5px; margin-left:20px; width: 550px; height: 40px">@
+            @<button type="submit" style="height: 40px; width: 40px"><i class="fa fa-search"></i></button>@*@
+        <br /><br /><br /><br />
+        <h1 style="margin-left: 20px; font-size: 50px">Most Trusted Health <br />Partner for life</h1>
+        <br /><br />
+
+        @*@@@row starts@@@*@
+        <br /><br />
+        <div style="display:flex; flex-direction:row-reverse">
+            <div style="height: 180px; width: 300px; background-color: darkslateblue; text-align: center; padding-top: 30px; margin-left: 10px; margin-right: 10px" class="shadow p-3 mb-5 bg-body-tertiary rounded">
+                <h3>Emergency Number</h3>
+                <p class="number">033 2538-5353</p>
+                <p>Call 24x7</p>
+            </div>
+            <div style="height: 180px; width: 300px; background-color: darkblue; text-align: center; padding-top: 30px" class="shadow p-3 mb-5 bg-body-tertiary rounded">
+                <h3>Opening Hours</h3>
+                <p>Mon-Fri 08.00-21.00</p>
+                <p>Sat-Sun 09.00-18.00</p>
+            </div>
+        </div>
+        @*@@@row end@@@*@
+
+
+
+    </div>
+    @*@xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@*@
+
+    @***************@
+    <h1 style="margin-left:20px">Drugs</h1>
+    <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card-wrapper container-sm d-flex  justify-content-around">
+                    <div class="card  " style="width: 18rem;align-items:center">
+                        <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="~/img/vitaminA.jpg" style="height: 100px; width: 100px" class="card-img-top" alt="..." />
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">HealthKart HK Vitals Healthy Vision</h5>
+
+                        </div>
+                    </div>
+                    <div class="card  " style="width: 18rem;align-items:center">
+                        <a data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                            <img src="~/img/vitaminB.jpg" style="height: 100px; width: 100px" class="card-img-top" alt="..." />
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">Mecofol 10 Tablet For Vitamin B12</h5>
+
+                        </div>
+                    </div>
+                    <div class="card  " style="width: 18rem;align-items:center">
+                        <a data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                            <img src="~/img/vitaminC.jpg" style="height: 100px; width: 100px" class="card-img-top" alt="..." />
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">Himalayan Organics Vitamin C</h5>
+
+                        </div>
+                    </div>
+                    <div class="card  " style="width: 18rem;align-items:center">
+                        <a data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                            <img src="~/img/vitaminD.jpg" style="height: 100px; width: 100px" class="card-img-top" alt="..." />
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">Calcium Vitamin D3 Tablets</h5>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card-wrapper container-sm d-flex justify-content-around">
+                    <div class="card  " style="width: 18rem;align-items:center">
+                        <a data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                            <img src="~/img/cal.jpg" style="height: 100px; width: 100px" class="card-img-top" alt="..." />
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">Paracetamol 500</h5>Calcium
+
+                        </div>
+                    </div>
+                    <div class="card  " style="width: 18rem;align-items:center">
+                        <a data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                            <img src="~/img/niacin.jpg" style="height: 100px; width: 100px" class="card-img-top" alt="..." />
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">Niacin (Vitamin B3)</h5>
+
+                        </div>
+                    </div>
+                    <div class="card  " style="width: 18rem;align-items:center">
+                        <a data-bs-toggle="modal" data-bs-target="#exampleModal6">
+                            <img src="~/img/folic.jpg" style="height: 100px; width: 100px" class="card-img-top" alt="..." />
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">Gynoveda Iron & Folic Acid Tablet</h5>
+
+                        </div>
+                    </div>
+                    <div class="card  " style="width: 18rem;align-items:center">
+                        <a data-bs-toggle="modal" data-bs-target="#exampleModal7">
+                            <img src="~/img/biotin.jpg" style="height: 100px; width: 100px" class="card-img-top" alt="..." />
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">Herbal Natural Biotin Vitamin B7 Capsules</h5>
+
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="column" style="width: 50%; display: block; margin-bottom: 20px; float: left; ">
-                <div class="card" style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2); padding: 16px; text-align: center; background-color: darkblue">
-                    <h3>Opening Hours</h3>
-                    <p>Mon-Fri 08.00-18.00</p>
-                    <p>Sat-Sun 09.00-15.00</p>
+            <button class="carousel-control-prev" role="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" role="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">HealthKart HK Vitals Healthy Vision</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="align-items:center; display:flex; flex-direction:row">
+                    <img src="~/img/vitaminA.jpg" style="height: 100px; width: 100px;" class="card-img-top" alt="..." />
+                    <p class="footer anchor">HealthKart HK Vitals Calcium Magnesium & Zinc Tablets with Vitamin D3, Calcium Supplement for Women and Men, For Bone Health & Joint Support, 60 Calcium Tablets</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    @*@<button type="button" class="btn btn-primary">Save changes</button>@*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mecofol 10 Tablet For Vitamin B12</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="align-items:center; display:flex; flex-direction:row">
+                    <img src="~/img/vitaminB.jpg" style="height: 100px; width: 100px;" class="card-img-top" alt="..." />
+                    <p class="footer anchor">Mecofol Tablet 10's belongs to the class of 'vitamins', primarily used to treat vitamin b12 deficiency and peripheral neuropathy (nerve damage in the hands and feet). It is also used to prevent/treat megaloblastic anaemia (anaemia with unusually large red blood cells). Vitamin B12 deficiency occurs when the body has lower levels of vitamin B12 than normal. Symptoms include fatigue, breathlessness, numbness, poor balance, and memory trouble.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    @*@<button type="button" class="btn btn-primary">Save changes</button>@*@
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> Himalayan Organics Vitamin C</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="align-items:center; display:flex; flex-direction:row">
+                    <img src="~/img/vitaminC.jpg" style="height: 100px; width: 100px;" class="card-img-top" alt="..." />
+                    <p class="footer anchor">Himalayan Organics Vitamin C 1000mg Tablets, Immunity, Antioxidant & Skin Care , 120 Veg Tabs. It is an essential cofactor of the enzymes synthesizing collagen, keeping structure healthy.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    @*@<button type="button" class="btn btn-primary">Save changes</button>@*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Calcium Vitamin D3 Tablets</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="align-items:center; display:flex; flex-direction:row">
+                    <img src="~/img/vitaminD.jpg" style="height: 100px; width: 100px;" class="card-img-top" alt="..." />
+                    <p class="footer anchor">Take this medication by mouth with food. If your product contains calcium citrate, then it may be taken with or without food.For best absorption, if your total daily dose is more than 600 milligrams, then divide your dose and space it throughout the day.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    @*@<button type="button" class="btn btn-primary">Save changes</button>@*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    @***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************@
+
+    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Paracetamol 500</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="align-items:center; display:flex; flex-direction:row">
+                    <img src="~/img/cal.jpg" style="height: 100px; width: 100px;" class="card-img-top" alt="..." />
+                    <p class="footer anchor">Paracetamol (Panadol, Calpol, Alvedon) is an analgesic and antipyretic drug that is used to temporarily relieve mild-to-moderate pain and fever. It is commonly included as an ingredient in cold and flu medications and is also used on its own.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    @*@<button type="button" class="btn btn-primary">Save changes</button>@*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Niacin (Vitamin B3)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="align-items:center; display:flex; flex-direction:row">
+                    <img src="~/img/niacin.jpg" style="height: 100px; width: 100px;" class="card-img-top" alt="..." />
+                    <p class="footer anchor">Healthy Hey Nutrition Niacin Vitamin B3 - 120 Capsules. Niacin is an essential b-vitamin that can aid in general overall health. Supplementation of the product results in improved cholesterol and triglyceride levels. </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    @*@<button type="button" class="btn btn-primary">Save changes</button>@*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Gynoveda Iron & Folic Acid Tablet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="align-items:center; display:flex; flex-direction:row">
+                    <img src="~/img/folic.jpg" style="height: 100px; width: 100px;" class="card-img-top" alt="..." />
+                    <p class="footer anchor">Gynoveda Iron Folic Acid Supplement, Ayurvedic Blood Builder for Hemoglobin lost in Periods, Rich in Calcium, B9, B12, Vitamin C from Amla, Helps in Anemia, Pregnancy, 1 Bottle, 60 Tablets. tablet with a powerful combination of four potent herbs- natural iron, amla, yashtimadhu, and giloy that help boost strength and energy.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    @*@<button type="button" class="btn btn-primary">Save changes</button>@*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Herbal Natural Biotin Vitamin B7 Capsules</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="align-items:center; display:flex; flex-direction:row">
+                    <img src="~/img/biotin.jpg" style="height: 100px; width: 100px;" class="card-img-top" alt="..." />
+                    <p class="footer anchor">Simply Herbal Natural Biotin Vitamin B7 Capsules for Hair & Skin Enriched With Keratin + Multivitamin + Amino Acid For Men Women (90 Capsules). Biotin is a water soluble vitamin thus cannot be stored in the body hence regular supplementation helps maintain the biotin levels in the body</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    @*@<button type="button" class="btn btn-primary">Save changes</button>@*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div>
         @RenderBody()
+    </div>
+
+
+    @*@@@code for footer portion@@@*@
+    <div class="container body-content">
+        <hr />
+        <footer>
+            <div style="display:flex; flex-direction:row; margin-left:-80px">
+                <div style="height:50px; width:150px; background-color:red">
+                    <p style="text-align:center"><b>Medific</b> <br /> medical and medics</p>
+                </div>
+
+                <div>
+                    <p class="footer">
+                        &ensp; <a class="footer anchor" href="#">Terms & Conditions </a>&ensp;|&ensp;
+                        <a class="footer anchor" href="#">Privacy Policy </a>&ensp;|&ensp;
+                        <a class="footer anchor" href="#">Price & Freight Policy</a>
+                    </p>
+                    <p class="footer">&ensp;&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
