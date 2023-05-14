@@ -1,0 +1,66 @@
+﻿@model IBM_CAS.Models.SecuritydbModel.Supplier
+
+@{
+    ViewBag.Title = "SupplierDetails";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>SupplierDetails</h2>
+
+<div>
+    <h4>Supplier</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <button class="btn btn-dark">@Html.ActionLink("Back to List", "ListSupplier", null, new { @style = "text-decoration:none;color:white;" })</button>
+</p>

@@ -1,0 +1,68 @@
+﻿@model IEnumerable<IBM_CAS.Models.SecuritydbModel.Salesman>
+
+@{
+    ViewBag.Title = "EditSalesmanViewList";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>EditSalesmanViewList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="table-responsive">
+    <table class="table table-hover table-center">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SalesmanFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SalesmanLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SalesmanDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SalesmanEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SalesmanPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.User.UserName)
+                </th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SalesmanFirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SalesmanLastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SalesmanDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SalesmanEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SalesmanPhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.UserName)
+                    </td>
+                    <td>
+                        <button class="btn btn-dark">@Html.ActionLink("Edit", "EditSalesman", new { id = item.SalesmanId }, new { @style = "text-decoration:none;color:white;" })</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>

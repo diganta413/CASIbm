@@ -1,0 +1,66 @@
+﻿@model IEnumerable<IBM_CAS.Models.SecuritydbModel.Supplier>
+
+@{
+    ViewBag.Title = "EditSupplierViewList";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>EditSupplierViewList</h2>
+
+<div class="table-responsive">
+    <table class="table table-hover table-center">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupplierFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupplierLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupplierDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupplierEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupplierPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.User.UserName)
+                </th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SupplierFirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SupplierLastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SupplierDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SupplierEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SupplierPhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.UserName)
+                    </td>
+                    <td>
+                        <button class="btn btn-dark">@Html.ActionLink("Edit", "EditSupplier", new { id = item.SupplierId }, new { @style = "text-decoration:none;color:white;" })</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
