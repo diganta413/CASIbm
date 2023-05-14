@@ -55,6 +55,13 @@ namespace IBM_CAS.Controllers
             ViewBag.salesmen = list1;
             return View();
         }
+        [HttpPost]
+        public ActionResult AddNewOrder(IBMApr2023Batch_CASProj.Models.SecurityModel.Order order)
+        {
+            _db.Orders.Add(order);
+            _db.SaveChanges();
+            return RedirectToAction("Index","Doctor");
+        }
 
     }
     

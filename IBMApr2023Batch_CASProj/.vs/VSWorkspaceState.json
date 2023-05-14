@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Models"
   ],
-  "SelectedNode": "\\IBMApr2023Batch_CASProj.csproj.user",
+  "SelectedNode": "\\Models\\IndexViewModel.cs",
   "PreviewInSolutionExplorer": false
 }
