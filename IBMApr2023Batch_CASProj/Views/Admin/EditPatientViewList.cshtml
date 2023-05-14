@@ -1,0 +1,72 @@
+﻿@model IEnumerable<IBM_CAS.Models.SecuritydbModel.Patient>
+
+@{
+    ViewBag.Title = "EditPatientViewList";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>EditPatientViewList</h2>
+<div class="table-responsive">
+    <table class="table table-hover table-center">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientBloodGroup)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.User.UserName)
+                </th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientFirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientLastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientPhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientBloodGroup)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.UserName)
+                    </td>
+                    <td>
+                        <button class="btn btn-dark">@Html.ActionLink("Edit", "EditDoctor", new { id = item.PatientId }, new { @style = "text-decoration:none;color:white;" })</button>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    </div>

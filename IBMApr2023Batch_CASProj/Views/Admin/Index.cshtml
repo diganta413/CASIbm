@@ -1,10 +1,311 @@
-﻿
+﻿@model IBM_CAS.Models.IndexViewModel
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
-@{
-    ViewBag.Title = "Index";
-}
 
+
+    @*<div class="content container-fluid">*@
+        <div class="page-header">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="page-title">Welcome Admin!</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="card bg-one w-100">
+                    <div class="card-body">
+                        <div class="db-widgets d-flex justify-content-between align-items-center">
+                            <div class="db-icon">
+                                <i class="fa-solid fa-user-doctor"></i>
+                            </div>
+                            <div class="db-info">
+                                <h3>@Model.DoctorCount</h3>
+                                <h6>Doctors</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="card bg-two w-100">
+                    <div class="card-body">
+                        <div class="db-widgets d-flex justify-content-between align-items-center">
+                            <div class="db-icon">
+                                <i class="fa-solid fa-bed"></i>
+                            </div>
+                            <div class="db-info">
+                                <h3>@Model.PatientCount</h3>
+                                <h6>Patients</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="card bg-three w-100">
+                    <div class="card-body">
+                        <div class="db-widgets d-flex justify-content-between align-items-center">
+                            <div class="db-icon">
+                                <i class="fa-solid fa-truck-field"></i>
+                            </div>
+                            <div class="db-info">
+                                <h3>@Model.SupplierCount</h3>
+                                <h6>Suppliers</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="card bg-four w-100">
+                    <div class="card-body">
+                        <div class="db-widgets d-flex justify-content-between align-items-center">
+                            <div class="db-icon">
+                                <i class="fa-solid fa-universal-access"></i>
+                            </div>
+                            <div class="db-info">
+                                <h3>@Model.SalesmanCount</h3>
+                                <h6>Salesman</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-header">
+                        <h5 class="card-title">Doctors</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-center">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Doctor ID</th>
+                                        <th>Doctor First Name</th>
+                                        <th class="text-center">Doctor Last Name</th>
+                                        <th class="text-center">Doctor Description</th>
+                                        <th class="text-center">Doctor Email</th>
+                                        <th class="text-center">Doctor Specialization</th>
+                                        <th class="text-center">Doctor Phone</th>
+                                        <th class="text-right">Doctor Status</th>
+                                        
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var item in Model.Doctors)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.User.UserName)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.DoctorFirstName)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.DoctorLastName)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.DoctorDescription)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.DoctorEmail)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.DoctorSpec)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.DoctorPhone)
+                                            </td>
+                                            <td class="text-right">
+                                                @Html.DisplayFor(modelItem => item.DoctorStatus)
+                                            </td>
+
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-header">
+                        <h5 class="card-title">Patients</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-center">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Patient ID</th>
+                                        <th>Patient First Name</th>
+                                        <th class="text-center">Patient Last Name</th>
+                                        <th class="text-center">Patient Description</th>
+                                        <th class="text-center">Patient Email</th>
+                                        <th class="text-center">Patient Phone</th>
+                                        <th class="text-right">Patient Blood Group</th>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var item in Model.Patients)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.User.UserName)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.PatientFirstName)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.PatientLastName)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.PatientDescription)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.PatientEmail)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.PatientPhone)
+                                            </td>
+                                            <td class="text-right">
+                                                @Html.DisplayFor(modelItem => item.PatientBloodGroup)
+                                            </td>
+
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-header">
+                        <h5 class="card-title">Suppliers</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-center">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Supplier ID</th>
+                                        <th>Supplier First Name</th>
+                                        <th class="text-center">Supplier Last Name</th>
+                                        <th class="text-center">Supplier Description</th>
+                                        <th class="text-center">Supplier Email</th>
+                                        <th class="text-center">Supplier Phone</th>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var item in Model.Suppliers)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.User.UserName)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.SupplierFirstName)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.SupplierLastName)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.SupplierDescription)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.SupplierEmail)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.SupplierPhone)
+                                            </td>
+                                            
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-header">
+                        <h5 class="card-title">Salesman</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-center">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Salesman ID</th>
+                                        <th>Salesman First Name</th>
+                                        <th class="text-center">Salesman Last Name</th>
+                                        <th class="text-center">Salesman Description</th>
+                                        <th class="text-center">Salesman Email</th>
+                                        <th class="text-center">Salesman Phone</th>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var item in Model.Salesmen)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.User.UserName)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.SalesmanFirstName)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.SalesmanLastName)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.SalesmanDescription)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.SalesmanEmail)
+                                            </td>
+                                            <td class="text-center">
+                                                @Html.DisplayFor(modelItem => item.SalesmanPhone)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @*</div>*@
+    <footer>
+        <p>Clinic Automation System.</p>
+    </footer>
 

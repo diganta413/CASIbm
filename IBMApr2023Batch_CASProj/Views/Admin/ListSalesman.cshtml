@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "ListSalesman";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <h2>ListSalesman</h2>
@@ -9,55 +10,70 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.SalesmanFirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SalesmanLastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SalesmanDescription)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SalesmanEmail)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SalesmanPhone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.User.UserName)
-        </th>
-        <th></th>
-    </tr>
+<div class="table-responsive">
+    <table class="table table-hover table-center">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SalesmanFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SalesmanLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SalesmanDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SalesmanEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SalesmanPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.User.UserName)
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SalesmanFirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SalesmanLastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SalesmanDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SalesmanEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SalesmanPhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.UserName)
+                    </td>
+                    <td>
+                        <form class="d-flex" role="search" action="@Url.Action("EditSalesman", new { id = item.SalesmanId })">
+                            @* @if(User.Identity.IsAuthenticated)  {}  *@
+                            <button class="btn btn-dark" style="margin-bottom:4px;" type="submit">Edit </button>
+                        </form>
+                        <form class="d-flex" role="search" action="@Url.Action("SalesmanDetails", new { id = item.SalesmanId })">
+                            @* @if(User.Identity.IsAuthenticated)  {}  *@
+                            <button class="btn btn-dark" style="margin-bottom:4px;" type="submit">Details </button>
+                        </form>
+                        <form class="d-flex" role="search" action="@Url.Action("DeleteSalesman", new { id = item.SalesmanId })">
+                            @* @if(User.Identity.IsAuthenticated)  {}  *@
+                            <button class="btn btn-dark" style="margin-bottom:4px;" type="submit">Delete </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.SalesmanFirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SalesmanLastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SalesmanDescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SalesmanEmail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SalesmanPhone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.User.UserName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SalesmanId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SalesmanId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SalesmanId })
-        </td>
-    </tr>
-}
-
-</table>
+    </table>
+</div>

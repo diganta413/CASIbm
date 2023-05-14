@@ -2,9 +2,10 @@
 
 @{
     ViewBag.Title = "AddNewSupplier";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>AddNewSupplier</h2>
+<h2>Add New Supplier</h2>
 
 
 @using (Html.BeginForm())
@@ -68,6 +69,7 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
 <script src="~/Scripts/jquery-3.6.4.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
