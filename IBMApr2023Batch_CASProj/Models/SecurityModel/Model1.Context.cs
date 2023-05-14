@@ -26,5 +26,9 @@ namespace IBMApr2023Batch_CASProj.Models.SecurityModel
         }
     
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Doctor> Doctors { get; set; }
+        public virtual DbSet<Patient> Patients { get; set; }
+        public virtual DbSet<Salesman> Salesmen { get; set; }
+        public virtual DbSet<Supplier> Suppliers { get; set; }
     }
 }

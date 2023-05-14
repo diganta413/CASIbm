@@ -39,3 +39,33 @@ h3 {
 p {
     color: white;
 }
+
+.admin {
+    position: relative;
+    min-height: 500px;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('admin2.jpg');
+    background-size: cover;
+}
+
+    .admin .content {
+        max-width: 800px;
+        text-align: center;
+    }
+
+        .admin .content h2 {
+            font-size: 64px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            color: #333
+        }
+
+        .admin .content p {
+            font-weight: 400;
+            color: white;
+        }

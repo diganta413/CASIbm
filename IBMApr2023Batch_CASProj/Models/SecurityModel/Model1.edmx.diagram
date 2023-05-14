@@ -6,6 +6,14 @@
     <edmx:Diagrams>
       <Diagram DiagramId="66cf5eb07eb7483f99f8a2790db61290" Name="Diagram1">
         <EntityTypeShape EntityType="CASIbmModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CASIbmModel.Doctor" Width="1.5" PointX="3" PointY="5.5" />
+        <AssociationConnector Association="CASIbmModel.FK__Doctor__UserId__3A81B327" />
+        <EntityTypeShape EntityType="CASIbmModel.Patient" Width="1.5" PointX="3" PointY="16.375" />
+        <EntityTypeShape EntityType="CASIbmModel.Salesman" Width="1.5" PointX="3" PointY="9.875" />
+        <EntityTypeShape EntityType="CASIbmModel.Supplier" Width="1.5" PointX="3" PointY="13.125" />
+        <AssociationConnector Association="CASIbmModel.FK__Patient__UserId__3F466844" />
+        <AssociationConnector Association="CASIbmModel.FK__Salesman__UserId__440B1D61" />
+        <AssociationConnector Association="CASIbmModel.FK__Supplier__UserId__44FF419A" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

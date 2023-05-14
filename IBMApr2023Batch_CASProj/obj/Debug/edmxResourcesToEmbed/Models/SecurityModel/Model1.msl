@@ -12,5 +12,60 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Doctors">
+      <EntityTypeMapping TypeName="CASIbmModel.Doctor">
+        <MappingFragment StoreEntitySet="Doctor">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="DoctorStatus" ColumnName="DoctorStatus" />
+          <ScalarProperty Name="DoctorPhone" ColumnName="DoctorPhone" />
+          <ScalarProperty Name="DoctorSpec" ColumnName="DoctorSpec" />
+          <ScalarProperty Name="DoctorEmail" ColumnName="DoctorEmail" />
+          <ScalarProperty Name="DoctorDescription" ColumnName="DoctorDescription" />
+          <ScalarProperty Name="DoctorLastName" ColumnName="DoctorLastName" />
+          <ScalarProperty Name="DoctorFirstName" ColumnName="DoctorFirstName" />
+          <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="CASIbmModel.Patient">
+        <MappingFragment StoreEntitySet="Patient">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PatientBloodGroup" ColumnName="PatientBloodGroup" />
+          <ScalarProperty Name="PatientPhone" ColumnName="PatientPhone" />
+          <ScalarProperty Name="PatientEmail" ColumnName="PatientEmail" />
+          <ScalarProperty Name="PatientDescription" ColumnName="PatientDescription" />
+          <ScalarProperty Name="PatientLastName" ColumnName="PatientLastName" />
+          <ScalarProperty Name="PatientFirstName" ColumnName="PatientFirstName" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salesmen">
+      <EntityTypeMapping TypeName="CASIbmModel.Salesman">
+        <MappingFragment StoreEntitySet="Salesman">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="SalesmanPhone" ColumnName="SalesmanPhone" />
+          <ScalarProperty Name="SalesmanEmail" ColumnName="SalesmanEmail" />
+          <ScalarProperty Name="SalesmanDescription" ColumnName="SalesmanDescription" />
+          <ScalarProperty Name="SalesmanLastName" ColumnName="SalesmanLastName" />
+          <ScalarProperty Name="SalesmanFirstName" ColumnName="SalesmanFirstName" />
+          <ScalarProperty Name="SalesmanId" ColumnName="SalesmanId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="CASIbmModel.Supplier">
+        <MappingFragment StoreEntitySet="Supplier">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="SupplierPhone" ColumnName="SupplierPhone" />
+          <ScalarProperty Name="SupplierEmail" ColumnName="SupplierEmail" />
+          <ScalarProperty Name="SupplierDescription" ColumnName="SupplierDescription" />
+          <ScalarProperty Name="SupplierLastName" ColumnName="SupplierLastName" />
+          <ScalarProperty Name="SupplierFirstName" ColumnName="SupplierFirstName" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

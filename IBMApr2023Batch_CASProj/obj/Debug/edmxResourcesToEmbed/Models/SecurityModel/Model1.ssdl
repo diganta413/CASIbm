@@ -1,5 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CASIbmModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Doctor">
+    <Key>
+      <PropertyRef Name="DoctorId" />
+    </Key>
+    <Property Name="DoctorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DoctorFirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DoctorLastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DoctorDescription" Type="varchar" MaxLength="50" />
+    <Property Name="DoctorEmail" Type="varchar" MaxLength="50" />
+    <Property Name="DoctorSpec" Type="varchar" MaxLength="10" />
+    <Property Name="DoctorPhone" Type="varchar" MaxLength="10" />
+    <Property Name="DoctorStatus" Type="varchar" MaxLength="10" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Patient">
+    <Key>
+      <PropertyRef Name="PatientId" />
+    </Key>
+    <Property Name="PatientId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientFirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PatientLastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PatientDescription" Type="varchar" MaxLength="50" />
+    <Property Name="PatientEmail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PatientPhone" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PatientBloodGroup" Type="varchar" MaxLength="10" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Salesman">
+    <Key>
+      <PropertyRef Name="SalesmanId" />
+    </Key>
+    <Property Name="SalesmanId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SalesmanFirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SalesmanLastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SalesmanDescription" Type="varchar" MaxLength="50" />
+    <Property Name="SalesmanEmail" Type="varchar" MaxLength="50" />
+    <Property Name="SalesmanPhone" Type="varchar" MaxLength="20" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="SupplierId" />
+    </Key>
+    <Property Name="SupplierId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierFirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SupplierLastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SupplierDescription" Type="varchar" MaxLength="50" />
+    <Property Name="SupplierEmail" Type="varchar" MaxLength="50" />
+    <Property Name="SupplierPhone" Type="varchar" MaxLength="10" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="User">
     <Key>
       <PropertyRef Name="UserId" />
@@ -10,7 +61,75 @@
     <Property Name="UserRole" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="LoginStatus" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
+  <Association Name="FK__Doctor__UserId__3A81B327">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Doctor" Type="Self.Doctor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Doctor">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Patient__UserId__3F466844">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Patient">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Salesman__UserId__440B1D61">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Salesman" Type="Self.Salesman" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Salesman">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Supplier__UserId__44FF419A">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Supplier">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="CASIbmModelStoreContainer">
+    <EntitySet Name="Doctor" EntityType="Self.Doctor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Patient" EntityType="Self.Patient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Salesman" EntityType="Self.Salesman" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Doctor__UserId__3A81B327" Association="Self.FK__Doctor__UserId__3A81B327">
+      <End Role="User" EntitySet="User" />
+      <End Role="Doctor" EntitySet="Doctor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Patient__UserId__3F466844" Association="Self.FK__Patient__UserId__3F466844">
+      <End Role="User" EntitySet="User" />
+      <End Role="Patient" EntitySet="Patient" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Salesman__UserId__440B1D61" Association="Self.FK__Salesman__UserId__440B1D61">
+      <End Role="User" EntitySet="User" />
+      <End Role="Salesman" EntitySet="Salesman" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Supplier__UserId__44FF419A" Association="Self.FK__Supplier__UserId__44FF419A">
+      <End Role="User" EntitySet="User" />
+      <End Role="Supplier" EntitySet="Supplier" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>
