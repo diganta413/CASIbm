@@ -14,6 +14,13 @@
         <AssociationConnector Association="CASIbmModel.FK__Patient__UserId__3F466844" />
         <AssociationConnector Association="CASIbmModel.FK__Salesman__UserId__440B1D61" />
         <AssociationConnector Association="CASIbmModel.FK__Supplier__UserId__44FF419A" />
+        <EntityTypeShape EntityType="CASIbmModel.Drug" Width="1.5" PointX="5.25" PointY="7.75" />
+        <EntityTypeShape EntityType="CASIbmModel.Order" Width="1.5" PointX="5.25" PointY="11.625" />
+        <EntityTypeShape EntityType="CASIbmModel.OrderItem" Width="1.5" PointX="7.5" PointY="11.75" />
+        <AssociationConnector Association="CASIbmModel.FK__OrderItem__DrugI__3D5E1FD2" />
+        <AssociationConnector Association="CASIbmModel.FK__Order__SalesmanI__3B75D760" />
+        <AssociationConnector Association="CASIbmModel.FK__Order__SupplierI__3C69FB99" />
+        <AssociationConnector Association="CASIbmModel.FK__OrderItem__Order__3E52440B" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

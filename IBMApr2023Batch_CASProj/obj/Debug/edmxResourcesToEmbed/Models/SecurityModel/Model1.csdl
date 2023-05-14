@@ -36,6 +36,25 @@
       <End Role="User" EntitySet="Users" />
       <End Role="Supplier" EntitySet="Suppliers" />
     </AssociationSet>
+    <EntitySet Name="Drugs" EntityType="CASIbmModel.Drug" />
+    <EntitySet Name="Orders" EntityType="CASIbmModel.Order" />
+    <EntitySet Name="OrderItems" EntityType="CASIbmModel.OrderItem" />
+    <AssociationSet Name="FK__OrderItem__DrugI__3D5E1FD2" Association="CASIbmModel.FK__OrderItem__DrugI__3D5E1FD2">
+      <End Role="Drug" EntitySet="Drugs" />
+      <End Role="OrderItem" EntitySet="OrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Order__SalesmanI__3B75D760" Association="CASIbmModel.FK__Order__SalesmanI__3B75D760">
+      <End Role="Salesman" EntitySet="Salesmen" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Order__SupplierI__3C69FB99" Association="CASIbmModel.FK__Order__SupplierI__3C69FB99">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderItem__Order__3E52440B" Association="CASIbmModel.FK__OrderItem__Order__3E52440B">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="OrderItem" EntitySet="OrderItems" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Doctor">
     <Key>
@@ -90,6 +109,7 @@
     <Property Name="SalesmanPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="UserId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="User" Relationship="CASIbmModel.FK__Salesman__UserId__440B1D61" FromRole="Salesman" ToRole="User" />
+    <NavigationProperty Name="Orders" Relationship="CASIbmModel.FK__Order__SalesmanI__3B75D760" FromRole="Salesman" ToRole="Order" />
   </EntityType>
   <EntityType Name="Supplier">
     <Key>
@@ -103,6 +123,7 @@
     <Property Name="SupplierPhone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="UserId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="User" Relationship="CASIbmModel.FK__Supplier__UserId__44FF419A" FromRole="Supplier" ToRole="User" />
+    <NavigationProperty Name="Orders" Relationship="CASIbmModel.FK__Order__SupplierI__3C69FB99" FromRole="Supplier" ToRole="Order" />
   </EntityType>
   <Association Name="FK__Patient__UserId__3F466844">
     <End Type="CASIbmModel.User" Role="User" Multiplicity="1" />
@@ -137,6 +158,90 @@
       </Principal>
       <Dependent Role="Supplier">
         <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Drug">
+    <Key>
+      <PropertyRef Name="DrugId" />
+    </Key>
+    <Property Name="DrugId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DrugName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DrugExpiry" Type="DateTime" Precision="0" />
+    <Property Name="DrugDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DrugType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DrugDosage" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="OrderItems" Relationship="CASIbmModel.FK__OrderItem__DrugI__3D5E1FD2" FromRole="Drug" ToRole="OrderItem" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierId" Type="Int32" Nullable="false" />
+    <Property Name="SalesmanId" Type="Int32" Nullable="false" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Salesman" Relationship="CASIbmModel.FK__Order__SalesmanI__3B75D760" FromRole="Order" ToRole="Salesman" />
+    <NavigationProperty Name="Supplier" Relationship="CASIbmModel.FK__Order__SupplierI__3C69FB99" FromRole="Order" ToRole="Supplier" />
+    <NavigationProperty Name="OrderItems" Relationship="CASIbmModel.FK__OrderItem__Order__3E52440B" FromRole="Order" ToRole="OrderItem" />
+  </EntityType>
+  <EntityType Name="OrderItem">
+    <Key>
+      <PropertyRef Name="OrderItemId" />
+    </Key>
+    <Property Name="OrderItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="DrugId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Drug" Relationship="CASIbmModel.FK__OrderItem__DrugI__3D5E1FD2" FromRole="OrderItem" ToRole="Drug" />
+    <NavigationProperty Name="Order" Relationship="CASIbmModel.FK__OrderItem__Order__3E52440B" FromRole="OrderItem" ToRole="Order" />
+  </EntityType>
+  <Association Name="FK__OrderItem__DrugI__3D5E1FD2">
+    <End Type="CASIbmModel.Drug" Role="Drug" Multiplicity="1" />
+    <End Type="CASIbmModel.OrderItem" Role="OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drug">
+        <PropertyRef Name="DrugId" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="DrugId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Order__SalesmanI__3B75D760">
+    <End Type="CASIbmModel.Salesman" Role="Salesman" Multiplicity="1" />
+    <End Type="CASIbmModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salesman">
+        <PropertyRef Name="SalesmanId" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="SalesmanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Order__SupplierI__3C69FB99">
+    <End Type="CASIbmModel.Supplier" Role="Supplier" Multiplicity="1" />
+    <End Type="CASIbmModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierId" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderItem__Order__3E52440B">
+    <End Type="CASIbmModel.Order" Role="Order" Multiplicity="1" />
+    <End Type="CASIbmModel.OrderItem" Role="OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="OrderId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

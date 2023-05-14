@@ -1,0 +1,100 @@
+﻿@model IEnumerable<IBMApr2023Batch_CASProj.Models.SecurityModel.Patient>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/jquery-3.6.4.js"></script>
+    <link href="~/CSS/Doctor.css" rel="stylesheet" />
+   
+    <title>ListPatients</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index: 2; box-shadow: 0 2px 4px 0 rgba(0,0,0,.2)">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-weight: bolder;font-size: 25px;">CAS Doctor Dashboard</a>
+
+        </div>
+        <form class="d-flex" role="search" action="@Url.Action("Logout","Home")">
+            @* @if(User.Identity.IsAuthenticated)  {}  *@
+            <button type="submit" class="btn btn-danger" style="margin-right: 20px">Logout</button>
+        </form>
+
+        
+    </nav>
+    <!-- Sidebar -->
+    <div id="mySidenav" class="sidenav">
+        <a class="nav-link active" aria-current="page" href="@Url.Action("ListPatients","Doctor")" style="margin-top: 20px;" >Patients</a>
+        <a class="nav-link" href="@Url.Action("Inventory","Doctor")" >Inventory</a>
+    </div>
+
+    <div class="content">
+        <h3 style="margin-bottom: 70px;margin-top: 50px">Patients</h3>
+        
+        <div class="list">
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PatientFirstName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PatientLastName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PatientDescription)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PatientEmail)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PatientPhone)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PatientBloodGroup)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.User.UserName)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr class="data_row">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PatientFirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PatientLastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PatientDescription)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PatientEmail)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PatientPhone)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PatientBloodGroup)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.User.UserName)
+                        </td>
+                        
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</body>
+</html>

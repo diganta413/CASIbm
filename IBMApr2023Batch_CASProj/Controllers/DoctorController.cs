@@ -14,25 +14,48 @@ namespace IBM_CAS.Controllers
         // GET: Doctor
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("ListPatients");
         }
-        public ActionResult Create()
+
+        public ActionResult ListPatients()
         {
-            return View();
+            return View(_db.Patients.Include("User").ToList());
         }
-        [HttpPost]
-        public ActionResult Create(IBMApr2023Batch_CASProj.Models.SecurityModel.Doctor doctor)
+
+        public ActionResult Inventory()
         {
-            IBMApr2023Batch_CASProj.Models.SecurityModel.User user = new IBMApr2023Batch_CASProj.Models.SecurityModel.User
+            return View(_db.Drugs.ToList());
+        }
+
+        public ActionResult AddNewOrder()
+        {
+            //getting suppliers
+            var s = _db.Suppliers.ToList();
+            List<SelectListItem> list = new List<SelectListItem>();
+            foreach (var c in s)
             {
-                UserName = "Doc" + DateTime.Now.ToString("ddmmyyyyhhmmss"),
-                UserPassword = DateTime.Now.ToString("ddmmyyyyhhmmss")
-            };
-            doctor.User = user;
-            _db.Doctors.Add(doctor);
-            _db.SaveChanges();
+                list.Add(new SelectListItem
+                {
+                    Text = c.SupplierFirstName,
+                    Value = c.SupplierId.ToString(),
+                });
+            }
+            //getting salesman
+            var sl = _db.Salesmen.ToList();
+            List<SelectListItem> list1 = new List<SelectListItem>();
+            foreach (var c1 in sl)
+            {
+                list1.Add(new SelectListItem
+                {
+                    Text = c1.SalesmanFirstName,
+                    Value = c1.SalesmanId.ToString(),
+                });
+            }
+            ViewBag.suppliers = list;
+            ViewBag.salesmen = list1;
             return View();
         }
+
     }
     
     
