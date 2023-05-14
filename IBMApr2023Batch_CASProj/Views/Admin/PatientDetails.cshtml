@@ -1,0 +1,74 @@
+﻿@model IBM_CAS.Models.SecuritydbModel.Patient
+
+@{
+    ViewBag.Title = "PatientDetails";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>PatientDetails</h2>
+
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientBloodGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientBloodGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <button class="btn btn-dark">@Html.ActionLink("Back to List", "ListPatient", null, new { @style = "text-decoration:none;color:white;" })</button>
+</p>

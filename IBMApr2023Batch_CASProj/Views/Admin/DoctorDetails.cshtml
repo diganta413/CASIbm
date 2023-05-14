@@ -1,0 +1,82 @@
+﻿@model IBM_CAS.Models.SecuritydbModel.Doctor
+
+@{
+    ViewBag.Title = "DoctorDetails";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>DoctorDetails</h2>
+
+<div>
+    <h4>Doctor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorSpec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorSpec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <button class="btn btn-dark">@Html.ActionLink("Back to List", "ListDoctor", null, new { @style = "text-decoration:none;color:white;" })</button>
+</p>

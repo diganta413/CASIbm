@@ -2,15 +2,16 @@
 
 @{
     ViewBag.Title = "AddNewPatient";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>AddNewPatient</h2>
+<h2>Add New Patient</h2>
 
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Patient</h4>
         <hr />
@@ -70,11 +71,13 @@
             </div>
         </div>
     </div>
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
 <script src="~/Scripts/jquery-3.6.4.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

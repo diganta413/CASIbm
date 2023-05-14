@@ -2,68 +2,84 @@
 
 @{
     ViewBag.Title = "ListPatient";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <h2>ListPatient</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "AddNewPatient")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.PatientFirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PatientLastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PatientDescription)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PatientEmail)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PatientPhone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PatientBloodGroup)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.User.UserName)
-        </th>
-        <th></th>
-    </tr>
+<div class="table-responsive">
+    <table class="table table-hover table-center">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientBloodGroup)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.User.UserName)
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientFirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientLastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientPhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientBloodGroup)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.UserName)
+                    </td>
+                    <td>
+                        <form class="d-flex" role="search" action="@Url.Action("EditPatient", new { id = item.PatientId })">
+                            @* @if(User.Identity.IsAuthenticated)  {}  *@
+                            <button class="btn btn-dark" style="margin-bottom:4px;" type="submit">Edit </button>
+                        </form>
+                        <form class="d-flex" role="search" action="@Url.Action("PatientDetails", new { id = item.PatientId })">
+                            @* @if(User.Identity.IsAuthenticated)  {}  *@
+                            <button class="btn btn-dark" style="margin-bottom:4px;" type="submit">Details </button>
+                        </form>
+                        <form class="d-flex" role="search" action="@Url.Action("DeletePatient", new { id = item.PatientId })">
+                            @* @if(User.Identity.IsAuthenticated)  {}  *@
+                            <button class="btn btn-dark" style="margin-bottom:4px;" type="submit">Delete </button>
+                        </form>
+                    </td>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PatientFirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PatientLastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PatientDescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PatientEmail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PatientPhone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PatientBloodGroup)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.User.UserName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PatientId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.PatientId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.PatientId })
-        </td>
-    </tr>
-}
-
-</table>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
