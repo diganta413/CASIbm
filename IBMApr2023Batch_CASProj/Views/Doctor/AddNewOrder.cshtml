@@ -1,4 +1,4 @@
-﻿@model IBMApr2023Batch_CASProj.Models.SecurityModel.Order
+﻿@model IBMApr2023Batch_CASProj.Models.OrderViewModel
 
 @{
     Layout = "~/Views/Shared/_LayoutDoctor.cshtml";
@@ -12,88 +12,70 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
     <script src="~/Scripts/jquery-3.6.4.js"></script>
+    <link href="~/CSS/Doctor.css" rel="stylesheet" />
     <title>AddNewOrder</title>
 </head>
-<body >
+<body>
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
-    <div style="width: 60%;margin: auto;margin-top: 5%">
-        <h4 style="font-weight: bolder;margin-bottom: 50px">Order</h4>
-        <form>
-            <div class="mb-3 row">
-                @Html.LabelFor(model => model.OrderDescription, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-sm-9">
-                    @Html.EditorFor(model => model.OrderDescription, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.OrderDescription, "", new { @class = "text-danger" })
+        <div style="width: 60%;margin: auto;margin-top: 5%">
+            <h4 style="font-weight: bolder;margin-bottom: 50px">Order</h4>
+            <form>
+                <div class="mb-3 row">
+                    @Html.LabelFor(model => model.OrderDesc, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-sm-9">
+                        @Html.EditorFor(model => model.OrderDesc, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.OrderDesc, "", new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="mb-3 row">
                     @Html.LabelFor(model => model.SupplierId, "Supplier", htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-sm-9">
-                        @Html.DropDownList("SupplierId", (IEnumerable<SelectListItem>)ViewBag.suppliers, htmlAttributes: new { @class = "form-control" })
+                        @Html.DropDownList("SupplierId", (IEnumerable<SelectListItem>)ViewBag.suppliers, htmlAttributes: new { @class = "form-select" })
                         @Html.ValidationMessageFor(model => model.SupplierId, "", new { @class = "text-danger" })
-                    </div>                   
                     </div>
+                </div>
                 <div class="mb-3 row">
-                    @Html.LabelFor(model => model.SalesmanId, "Salesman", htmlAttributes: new { @class = "control-label col-md-2" })
+                    @Html.LabelFor(model => model.SalesmanID, "Salesman", htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-sm-9">
-                        @Html.DropDownList("SalesmanId", (IEnumerable<SelectListItem>)ViewBag.salesmen, htmlAttributes: new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.SalesmanId, "", new { @class = "text-danger" })
+                        @Html.DropDownList("SalesmanId", (IEnumerable<SelectListItem>)ViewBag.salesmen, htmlAttributes: new { @class = "form-select" })
+                        @Html.ValidationMessageFor(model => model.SalesmanID, "", new { @class = "text-danger" })
                     </div>
-                    </div>
+                </div>
                 <div class="mb-3 row">
                     @Html.LabelFor(model => model.OrderDate, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-sm-9">
                         @Html.EditorFor(model => model.OrderDate, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.OrderDate, "", new { @class = "text-danger" })
                     </div>
-                    </div>
-                <button type="submit" class="btn btn-primary" style="margin-left: 45%;margin-top: 5%">Create Order</button>
-</form>
-    </div>
-        @*<div class="form-horizontal">
-
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(model => model.OrderDescription, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.OrderDescription, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.OrderDescription, "", new { @class = "text-danger" })
                 </div>
-            </div>
+                <button id="btnAddNewOrderItemRow" class="btn btn-primary" style="margin-left: 40%;margin-top: 2%;margin-bottom: 2%"> Add Order Item </button>
+                <div class="list" style="margin-left: 10%">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Drug Name</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbOrderItems">
+                            <tr id="Orderitemtmpl" class="data_row">
+                                <td style="width: 20%">
+                                    @Html.DropDownList("OrderItems[0].DrugID", new SelectList(ViewBag.Drugs, "DrugID", "DrugName"), htmlAttributes: new { @class = "form-select" })
+                                </td>
+                                <td style="width: 80%">
+                                    <input id="qty0" type="number" class="form-control" name="OrderItems[0].Quantity" value="" />
+                                </td>
+                            </tr>
+                        </tbody>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.SupplierId, "SupplierId", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DropDownList("SupplierId", (IEnumerable<SelectListItem>)ViewBag.suppliers, htmlAttributes: new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.SupplierId, "", new { @class = "text-danger" })
+                    </table>
                 </div>
-            </div>
+                <button type="submit" class="btn btn-success" style="margin-left: 45%;margin-top: 5%">Create Order</button>
+            </form>
+        </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.SalesmanId, "SalesmanId", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DropDownList("SalesmanId", (IEnumerable<SelectListItem>)ViewBag.salesmen, htmlAttributes: new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.SalesmanId, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.OrderDate, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.OrderDate, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.OrderDate, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
-                </div>
-            </div>
-        </div>*@
     }
 
     <div>
@@ -103,6 +85,29 @@
     <script src="~/Scripts/jquery-3.6.4.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+        $(function () {
+            //console.log("New Order")
+            var inc = 0
+            $("#btnAddNewOrderItemRow").click(function (arg) {
 
+                arg.preventDefault();
+
+                inc++;
+                var Rowtmpl = "<tr>" + $("#Orderitemtmpl").html() + "</tr>"
+                console.log(Rowtmpl)
+                var row = $(Rowtmpl);
+                $(row).attr("class", "data_row");
+                $(row).find("#OrderItems_0__DrugID").attr("name", "OrderItems[" + inc + "].DrugID")
+                $(row).find("#qty0").attr("name", "OrderItems[" + inc + "].Quantity")
+                $("#tbOrderItems").append(row)
+            })
+
+
+
+
+
+        })
+    </script>
 </body>
 </html>
