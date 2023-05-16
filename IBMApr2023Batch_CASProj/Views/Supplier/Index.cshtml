@@ -1,7 +1,78 @@
-﻿
+﻿@model IEnumerable<IBMApr2023Batch_CASProj.Models.SecurityModel.Order>
+
 @{
-    ViewBag.Title = "Index";
+    Layout = null;
 }
 
-<h2>Supplier Index</h2>
+<!DOCTYPE html>
 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-3.6.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <link href="~/CSS/Doctor.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index: 2; box-shadow: 0 2px 4px 0 rgba(0,0,0,.2)">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-weight: bolder;font-size: 25px;">CAS Supplier</a>
+
+        </div>
+        <form role="search" action="@Url.Action("Logout", "Home")" style="margin-block-end: 0;">
+            <button type="submit" class="btn btn-danger" style="margin-right: 20px">Logout</button>
+        </form>
+    </nav>
+    <h4 style="font-weight: bolder;margin-left: 16%;margin-top: 5%">Pending Orders</h4>
+    <div style="width: 80%;margin-left: 16%;margin-top: 5%">
+    <div class="list">
+        <table class="table">
+            <tr>
+                <th>
+                    Order Description
+                </th>
+                <th>
+                    Order Date
+                </th>
+                <th>
+                    Salesman Name
+                </th>
+                <th>
+                    Supplier Name
+                </th>
+                
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr class="data_row">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Salesman.SalesmanFirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Supplier.SupplierFirstName)
+                    </td>
+                    <td>
+                        <form class="d-flex" role="search" action="@Url.Action("OrderDetails", new { id = item.OrderId })">
+                            @* @if(User.Identity.IsAuthenticated)  {}  *@
+                            <button class="btn btn-dark" style="margin-bottom:4px;" type="submit">View Order</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+
+        </table>
+        </div>
+        </div>
+</body>
+</html>
