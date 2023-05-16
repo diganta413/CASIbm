@@ -1,0 +1,99 @@
+﻿@model IBMApr2023Batch_CASProj.Models.SecurityModel.Order
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-3.6.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <link href="~/CSS/Doctor.css" rel="stylesheet" />
+    <title>OrderDetails</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index: 2; box-shadow: 0 2px 4px 0 rgba(0,0,0,.2)">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-weight: bolder;font-size: 25px;">CAS Supplier</a>
+
+        </div>
+        <form role="search" action="@Url.Action("Logout", "Home")" style="margin-block-end: 0;">
+            <button type="submit" class="btn btn-danger" style="margin-right: 20px">Logout</button>
+        </form>
+    </nav>
+    <div style="width: 60%; margin-left: 15%;margin-top: 5%">
+        <h4 style="font-weight: bolder; margin-top: 2%; margin-left: 45%">Order Details</h4>
+        
+        <div class="container" style ="width: 80%;margin-top: 5%">
+            <div class="row mb-3">
+                
+                    <label class="col-md-2">Order Description</label>
+                
+
+                <div class="col-sm-10">
+                    <input type="text" value="@Model.OrderDescription" class="form-control" disabled>
+                </div>
+            </div>
+            
+
+    <div class="row mb-3">
+        
+            <label class="col-md-2">Order Date</label>
+            
+
+            <div class="col-md-10">
+                <input type="text" value="@Model.OrderDate.Date" class="form-control" disabled>
+            </div>
+        </div>
+
+    <div class="row mb-3">
+        
+            <label class="col-md-2">Salesman Name</label>
+           
+
+            <div class="col-sm-10">
+                <input type="text" value="@Model.Salesman.SalesmanFirstName" class="form-control" disabled>
+            </div>
+        </div>
+
+    <div class="row mb-3">
+        
+            <label class="col-md-2">Supplier Name</label>
+            
+
+            <div class="col-sm-10">
+                <input type="text" value="@Model.Supplier.SupplierFirstName" class="form-control" disabled>
+            </div>
+        </div>
+    <div class="row mb-3">
+        <h5 class="col-md-2" style="font-weight: bolder;margin-left: 45%;margin-top: 5%;margin-bottom: 5%">Order Items</h5>
+        <div class="list" style="margin-left: 15%">
+            <table class="table">
+                <tr>
+                    <th>Drug Name</th>
+                    <th>Quantity</th>
+                </tr>
+                @foreach (var item in Model.OrderItems)
+                {
+                    <tr class="data_row">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Drug.DrugName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>
