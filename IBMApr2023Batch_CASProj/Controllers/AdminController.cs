@@ -46,6 +46,7 @@ namespace IBM_CAS.Controllers
                 UserRole="DOCTOR",
                 LoginStatus="ACTIVE",
             };
+            
             doctor.User = user;
             doctor.DoctorStatus = "ACTIVE";
             _db.Doctors.Add(doctor);
