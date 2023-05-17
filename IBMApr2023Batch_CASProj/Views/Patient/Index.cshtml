@@ -1,7 +1,78 @@
-﻿
+﻿@model IBM_CAS.Models.SecuritydbModel.Patient
+
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPatient.cshtml";
 }
 
-<h2>Patient Index</h2>
+<h2>Index</h2>
 
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserId)
+        </dt>
+
+        <dd>
+            @User.Identity.Name
+        </dd>
+        
+        
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.PatientLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientBloodGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientBloodGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.UserName)
+        </dd>
+        *@
+
+    </dl>
+</div>
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PatientId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
