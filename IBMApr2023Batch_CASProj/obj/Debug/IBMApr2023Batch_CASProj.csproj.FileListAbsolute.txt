@@ -74,6 +74,8 @@ D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\EntityFramework
 D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\EntityFramework.SqlServer.dll
 D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\EntityFramework.xml
 D:\ClassDemo\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\EntityFramework.SqlServer.xml
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.csproj.AssemblyReference.cache
+F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.csproj.CoreCompileInputs.cache
 F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\IBMApr2023Batch_CASProj.dll.config
 F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\IBMApr2023Batch_CASProj.dll
 F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\IBMApr2023Batch_CASProj.pdb
@@ -145,8 +147,6 @@ F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.
 F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Helpers.xml
 F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\System.Web.Mvc.xml
 F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.csproj.AssemblyReference.cache
-F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.csproj.CoreCompileInputs.cache
 F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.csproj.CopyComplete
 F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.dll
 F:\.net ibm training\IBMApr2023Batch_CASProj\IBMApr2023Batch_CASProj\obj\Debug\IBMApr2023Batch_CASProj.pdb

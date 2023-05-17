@@ -4,15 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using IBMApr2023Batch_CASProj.Models.SecurityModel;
 
 namespace IBMApr2023Batch_CASProj.Controllers
 {
     public class HomeController : Controller
     {
+        IBMApr2023Batch_CASProj.Models.SecurityModel.CASIbmEntities _db = new IBMApr2023Batch_CASProj.Models.SecurityModel.CASIbmEntities();
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            return View(_db.Drugs.ToList());
         }
 
 public ActionResult Login()

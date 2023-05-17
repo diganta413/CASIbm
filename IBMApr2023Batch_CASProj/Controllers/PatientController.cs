@@ -1,4 +1,4 @@
-﻿using IBM_CAS.Models.SecuritydbModel;
+﻿using IBMApr2023Batch_CASProj.Models.SecurityModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,14 +6,13 @@ using System.Net;
 using System.Security.Claims;
 using System.Web;
 using System.Web.Mvc;
-using IBM_CAS.Models;
 
 namespace IBM_CAS.Controllers
 {
     [Authorize]
     public class PatientController : Controller
     {
-        Models.SecuritydbModel.ClinicAutomationSystemIBMEntities _db = new Models.SecuritydbModel.ClinicAutomationSystemIBMEntities();
+        IBMApr2023Batch_CASProj.Models.SecurityModel.CASIbmEntities _db = new IBMApr2023Batch_CASProj.Models.SecurityModel.CASIbmEntities();
         
 
         // GET: Patient
@@ -71,10 +70,10 @@ namespace IBM_CAS.Controllers
 
         }
         [HttpPost]
-        public ActionResult EditPatient(Models.SecuritydbModel.Patient patient)
+        public ActionResult EditPatient(IBMApr2023Batch_CASProj.Models.SecurityModel.Patient patient)
         {
             var existingPatient = _db.Patients.Find(patient.PatientId);
-            Models.SecuritydbModel.User user = new Models.SecuritydbModel.User
+            IBMApr2023Batch_CASProj.Models.SecurityModel.User user = new IBMApr2023Batch_CASProj.Models.SecurityModel.User
             {
                 UserName = existingPatient.User.UserName,
                 UserPassword = existingPatient.User.UserPassword,

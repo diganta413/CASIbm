@@ -1,7 +1,199 @@
-﻿
+﻿@model IEnumerable<IBMApr2023Batch_CASProj.Models.SecurityModel.Drug>
+
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+    Layout = null;
 }
 
+<!DOCTYPE html>
 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @*<link href="~/Content/Site.css" rel="stylesheet" />*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-secondary">
+        <div class="container-fluid" style="background-color:white;">
+            <img src="~/Content/logo.jpeg" width="75" />
+            <a class="navbar-brand" href="#">CAS Application</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Make An Order</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" action="@Url.Action("Login","Home")">
+                    <button class="btn btn-outline-primary" type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div style="background-image: url('../../img/photo.jpg'); background-size: cover; background-repeat: no-repeat; height:600px">
+
+        <p class="welcome" style="margin-left: 20px;color: darkblue;font-size: 2vw"><b>WELCOME TO MEDIFIC</b></p>
+        <br /><br /><br /><br />
+        <h1 style="margin-left: 20px; font-size: 50px;color: darkblue;font-style: oblique;letter-spacing: 3px">Most Trusted Health <br />Partner for life</h1>
+        <br /><br />
+
+        
+        <br /><br />
+        <div style="display:flex; flex-direction:row-reverse">
+            <div style="height: 180px; width: 300px; background-color: darkslateblue; text-align: center; padding-top: 30px; margin-left: 10px; margin-right: 10px" class="shadow p-3 mb-5 bg-body-tertiary rounded">
+                <h3 style="color: white;font-size: 1.5vw">Emergency Number</h3>
+                <p class="number" style="font-size: 2.2vw;color: white">033 2538-5353</p><br />
+                <p style="color: white">Call 24x7</p>
+            </div>
+            <div style="height: 180px; width: 300px; background-color: darkblue; text-align: center; padding-top: 30px" class="shadow p-3 mb-5 bg-body-tertiary rounded">
+                <h3 style="color: white;font-size: 1.5vw">Opening Hours</h3>
+                <p style="color: white">Mon-Fri 08.00-21.00</p><br />
+                <p style="color: white">Sat-Sun 09.00-18.00</p>
+            </div>
+        </div>
+       
+        <h1 style="margin-left:47%;margin-bottom: 20px;font-weight: bolder">Drugs</h1>
+
+        @*<div class="ui-widget" style="margin-left:20px; margin-bottom:10px">
+                @using (Html.BeginForm())
+                {
+                    <input type="text" id="tags" placeholder="Search drugs..." name="tags">
+                    <input type="submit" value="search" />
+                }
+            </div>
+
+            @if(Model!=null)
+            {
+            <h1>@item.DrugName</h1>
+            }*@
+
+        @*<script>
+                $(function () {
+                    var availableTags = [];
+                    $.ajax(
+                        {
+                            type: 'GET',
+                            url: '/Home/getDrug',
+                            success: function (response) {
+                                $.each(response, function (key, item) {
+                                    availableTags.push(item.DrugName);
+                                });
+                            }
+                        });
+
+                    $("#tags").autocomplete({
+                        source: availableTags
+                    });
+                });
+            </script>*@
+
+
+        <div style="display:flex; flex-direction:row; overflow-x:scroll; overflow-y:hidden;margin-bottom: 50px;margin-left: 20px">
+            @foreach (var item in Model)
+            {
+
+                <div>
+
+                    <div class="card-wrapper container-sm d-flex  justify-content-around" style="cursor:pointer">
+
+                        <div class="card  " style="width: 18rem;align-items:center; height:10rem">
+                            <a data-bs-toggle="modal" data-bs-target="#exampleModal@(item.DrugId)" style="margin-top: 10px">
+                                <h5 class="card-title" style="text-align:center;margin-top: 5px"> @item.DrugName</h5>
+                                <p class="card-body" style="text-align:match-parent"><b>Description:</b> @item.DrugDescription</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="modal fade" id="exampleModal@(item.DrugId)" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">@item.DrugName</h5>
+                                </div>
+                                <div class="modal-body" style="align-items:center; display:flex; flex-direction:row">
+                                    <p class="footer anchor"><b>Description:</b> @item.DrugDescription</p>
+                                </div>
+                                <div class="modal-body" style="align-items:center; display:flex; flex-direction:row">
+                                    <p class="footer anchor"><b>Dosage:</b> @item.DrugDosage</p>
+                                </div>
+                                <div class="modal-body" style="align-items:center; display:flex; flex-direction:row">
+                                    <p class="footer anchor"><b>Expiry Date:</b> @item.DrugExpiry</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                @*<tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DrugName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DrugExpiry)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DrugDescription)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DrugType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DrugDosage)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.DrugId }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.DrugId }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.DrugId })
+                        </td>
+                    </tr>*@
+            
+            
+        }
+        </div>
+
+        
+        <div class="container body-content" style="max-width: 1518px">
+            <hr />
+            <footer>
+                <div style="display:flex; flex-direction:row; margin-left:-80px">
+                    <div style="height:50px; width:150px; background-color:red">
+                        <p style="text-align:center; color:white"><b>Medific</b> <br /> medical and medics</p>
+                    </div>
+
+                    <div>
+                        <p class="footer">
+                            &ensp; <a class="footer anchor" href="#" style="color:black">Terms & Conditions </a>&ensp;|&ensp;
+                            <a class="footer anchor" href="#" style="color:black">Privacy Policy </a>&ensp;|&ensp;
+                            <a class="footer anchor" href="#" style="color:black">Price & Freight Policy</a>
+                        </p>
+                        <p class="footer">&ensp;&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        </div>
+    </body>
+</html>
