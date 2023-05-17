@@ -18,7 +18,7 @@ namespace IBM_CAS.Controllers
 
         public ActionResult Index()
         {
-            var viewModel = new Models.IndexViewModel()
+            var viewModel = new IBMApr2023Batch_CASProj.Models.IndexViewModel()
             {
                 Doctors = _db.Doctors.Include("User").ToList(),
                 Patients = _db.Patients.Include("User").ToList(),
@@ -46,6 +46,7 @@ namespace IBM_CAS.Controllers
                 UserRole="DOCTOR",
                 LoginStatus="ACTIVE",
             };
+            
             doctor.User = user;
             doctor.DoctorStatus = "ACTIVE";
             _db.Doctors.Add(doctor);

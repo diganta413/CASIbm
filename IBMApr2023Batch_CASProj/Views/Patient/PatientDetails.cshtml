@@ -1,0 +1,71 @@
+﻿@model IBMApr2023Batch_CASProj.Models.SecurityModel.Patient
+
+@{
+    ViewBag.Title = "PatientDetails";
+    Layout = "~/Views/Shared/_LayoutPatient.cshtml";
+}
+
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">Hi @Html.DisplayFor(model => model.PatientFirstName)</h3>
+            <ul class="breadcrumb">    
+                <li class="breadcrumb-item">Patient Details</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="form-title"><span>Patient Information</span></h5>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label>@Html.DisplayNameFor(model => model.PatientFirstName)</label>
+                                <input type="text" class="form-control" value="@Html.DisplayFor(model => model.PatientFirstName)" readonly>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label>@Html.DisplayNameFor(model => model.PatientLastName)</label>
+                                <input type="text" class="form-control" value="@Html.DisplayFor(model => model.PatientLastName)" readonly>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label>@Html.DisplayNameFor(model => model.PatientDescription)</label>
+                                <input type="text" class="form-control" value="@Html.DisplayFor(model => model.PatientDescription)" readonly>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label>@Html.DisplayNameFor(model => model.PatientEmail)</label>
+                                <input type="text" class="form-control" value="@Html.DisplayFor(model => model.PatientEmail)" readonly>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label>@Html.DisplayNameFor(model => model.PatientPhone)</label>
+                                <input type="text" class="form-control" value="@Html.DisplayFor(model => model.PatientPhone)" readonly>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label>@Html.DisplayNameFor(model => model.User.UserName)</label>
+                                <input type="text" class="form-control" value="@Html.DisplayFor(model => model.User.UserName)" readonly>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-dark">@Html.ActionLink("Edit", "EditPatient", new { id = Model.PatientId }, new { @style = "text-decoration:none;color:white;" })</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
